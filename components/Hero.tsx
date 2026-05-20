@@ -70,27 +70,16 @@ export function Hero() {
         className="absolute top-1/3 right-[10%] h-[380px] w-[380px] rounded-full bg-accent/20 blur-[140px] pointer-events-none"
       />
 
-      {/* Top utility bar */}
+      {/* Mute button (floating top-right) */}
       <div className="relative z-30 pt-24 md:pt-28">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10 flex items-center justify-between text-[11px] tracking-[0.3em] uppercase text-white/70">
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="flex items-center gap-3"
-          >
-            <span className="h-px w-6 bg-accent" />
-            <span>Drop 03</span>
-            <span className="text-white/30">/</span>
-            <span>SS · 26</span>
-          </motion.div>
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10 flex items-center justify-end">
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             onClick={toggleMute}
             aria-label={muted ? "Unmute" : "Mute"}
-            className="flex h-9 items-center gap-2 rounded-full border border-white/15 bg-black/30 backdrop-blur-md px-3 hover:border-accent transition-colors"
+            className="flex h-9 items-center gap-2 rounded-full border border-white/15 bg-black/30 backdrop-blur-md px-3 text-[11px] tracking-[0.3em] uppercase text-white/70 hover:border-accent transition-colors"
           >
             {muted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
             <span className="text-[10px]">{muted ? "Sound off" : "Sound on"}</span>
@@ -126,18 +115,6 @@ export function Hero() {
               <span className="line-through text-white/30">₹{products[0].compareAt}</span>
             </div>
           </div>
-        </motion.div>
-
-        {/* Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="flex items-center gap-3 mb-6 text-[11px] tracking-[0.3em] uppercase text-white/60"
-        >
-          <span className="font-mono text-accent">[ 01 ]</span>
-          <span>Now streaming</span>
-          <span className="h-px w-12 bg-white/20" />
         </motion.div>
 
         {/* Headline */}

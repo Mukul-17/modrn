@@ -13,7 +13,6 @@ const NAV = [
   { label: "Shop", href: "#shop" },
   { label: "Collections", href: "#collections" },
   { label: "Philosophy", href: "#philosophy" },
-  { label: "Journal", href: "#journal" },
 ];
 
 export function Navbar() {
